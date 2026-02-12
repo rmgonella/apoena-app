@@ -1,7 +1,3 @@
-Here is the English translation:
-
----
-
 # Grupo Apoena - Digital Ecosystem
 
 This project is the complete redesign of Grupo Apoena's digital ecosystem, developed in pure PHP (>= 8.x) following a lightweight and modular MVC architecture.

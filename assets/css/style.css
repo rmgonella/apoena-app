@@ -1,0 +1,511 @@
+/* =================================================
+   APOENA • PREMIUM UI SYSTEM
+================================================= */
+
+:root{
+  --green:#166534;
+  --green-light:#22c55e;
+  --orange:#ff9a0c;
+  --pink:#db0153;
+  --dark:#0b1220;
+  --soft:#f4f6f8;
+}
+
+*{
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  margin:0;
+  padding-top:120px;
+  color:#1e293b;
+  background:#fff;
+}
+
+html {
+    scroll-behavior: auto;
+     scroll-padding-top: 120px;
+}
+
+.bg-verde {
+    background-color: #2e7d32;
+}
+/* =====================================================
+   HERO INTERNO – BIOTECH
+===================================================== */
+
+.hero-internal {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Background */
+.biotech-hero {
+    background:
+        linear-gradient(
+            rgba(22, 101, 52, 0.75),
+            rgba(22, 101, 52, 0.75)
+        ),
+        url("../../uploads/img/biotech-hero.jpg") center / cover no-repeat;
+}
+
+/* Texto */
+.hero-internal h1 {
+    color: #fff;
+    font-size: clamp(2.6rem, 4vw, 3.6rem);
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-internal {
+        height: 240px;
+    }
+}
+
+
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.header-premium{
+  background:rgba(255,255,255,.90);
+  backdrop-filter:blur(18px);
+  height:120px;
+  border-bottom:1px solid rgba(0,0,0,.05);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  transition: background .3s, box-shadow .3s;
+}
+
+.header-premium .container{
+  height:120px;
+  display:flex;
+  align-items:center;
+}
+
+.header-premium.scrolled {
+   background: rgba(255,255,255,.98);
+   box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+.navbar{
+  height:120px;
+  display:flex;
+  align-items:center;
+}
+
+.navbar-brand{
+  display:flex;
+  align-items:center;
+}
+
+.navbar-brand img{
+  width:auto;
+  display:block;
+}
+
+.navbar-nav .nav-link{
+  font-weight:600;
+  color:#1e293b;
+  position:relative;
+  padding:8px 12px;
+  transition:.3s;
+}
+
+.navbar-nav .nav-link::after{
+  content:'';
+  position:absolute;
+  left:12px;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:var(--green);
+  transition:.3s;
+}
+
+.navbar-nav .nav-link:hover::after{
+  width:60%;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-left:20px;
+}
+
+.btn-pill{
+  padding:6px 18px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.8rem;
+  letter-spacing:.5px;
+  border:none;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-agro{ background:var(--orange); color:#fff; }
+.btn-agro:hover{ background:#e68900; }
+
+.btn-biocare{ background:var(--pink); color:#fff; }
+.btn-biocare:hover{ background:#b80045; }
+
+.lang-select{
+  border:none;
+  background:transparent;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.header-grid{
+  display:grid !important;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  min-height:110px;
+}
+
+.header-left{ justify-self:start; }
+.header-center{ justify-self:center; }
+.header-right{ justify-self:end; }
+
+.navbar-nav{ margin:0 !important; }
+
+/* =================================================
+   HERO
+================================================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("/uploads/img/bg-hero2.jpg") center/cover fixed;
+}
+
+.hero h1{
+  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:800;
+}
+
+.hero p{
+  font-size:1.3rem;
+  opacity:.9;
+}
+
+/* =================================================
+   SECTIONS
+================================================= */
+
+.section-padding{ padding:100px 0; }
+
+.section-light{ background:#fff; }
+
+.section-soft{ background:var(--soft); }
+
+.section-title{ font-weight:800; }
+
+/* =================================================
+   BIOTECH DARK SECTIONS (SOMENTE COR SÓLIDA)
+================================================= */
+
+.section-dark,
+.section-dark2{
+  position:relative;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+
+.section-dark{
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("/uploads/img/biotech-bg.jpg") center/cover;
+  color:#fff;
+}
+
+.section-dark2{
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("/uploads/img/biotech-bg2.png") center/cover;
+  color:#fff;
+}
+
+/* =================================================
+   IMAGENS
+================================================= */
+
+.about-img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 40px 80px rgba(0,0,0,.18);
+}
+
+/* =================================================
+   CARDS
+================================================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+}
+
+.card{
+  padding:32px;
+  border-radius:18px;
+  color:#fff;
+  cursor:pointer;
+  transform:translateY(0);
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  transition:transform .35s ease, box-shadow .35s ease;
+  border:none;
+}
+
+.card:nth-child(1){ background:#166534; }
+.card:nth-child(2){ background:#ff9a0c; }
+.card:nth-child(3){ background:#db0153; }
+
+.card:hover{
+  transform:translateY(-16px);
+  box-shadow:0 45px 90px rgba(0,0,0,.35);
+}
+
+.card a{
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* =================================================
+   NUMBERS
+================================================= */
+
+.numbers{
+  background:linear-gradient(135deg,#eef7f0,#fff);
+}
+
+.counter{
+  font-size:3.2rem;
+  font-weight:800;
+  color:var(--green);
+}
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer{
+  background:#0b1220;
+  color:#cbd5e1;
+  padding:80px 0 30px;
+}
+
+.footer img{ height:60px; }
+
+.footer h5{
+  color:#fff;
+  font-weight:700;
+}
+
+.footer a{
+  color:#cbd5e1;
+  text-decoration:none;
+  display:block;
+  margin-bottom:8px;
+  transition:.3s;
+}
+
+.footer a:hover{
+  color:var(--green-light);
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:40px;
+  padding-top:20px;
+  text-align:center;
+  font-size:.9rem;
+}
+
+/* =================================================
+   ANIMAÇÕES
+================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+.section-diretor {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+.diretor-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Título */
+.titulo-diretor {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2ca02c;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+/* Texto */
+.section-diretor p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Destaque verde nas perguntas */
+.texto-destaque {
+  color: #2ca02c;
+  font-weight: 600;
+}
+
+/* Card da imagem */
+.card-diretor {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Imagem */
+.img-diretor {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Nome */
+.nome-diretor {
+  margin-top: 25px;
+  background-color: #3aaa35;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 14px 40px;
+  border-radius: 14px;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+  .titulo-diretor {
+    font-size: 2rem;
+  }
+
+  .section-diretor {
+    padding: 70px 0;
+  }
+
+  .nome-diretor {
+    width: 100%;
+  }
+}
+
+/* =================================================
+   MISSAO / VISAO / VALORES
+================================================= */
+.mvv-premium {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f4f8f6, #e9f3ef);
+}
+
+.mvv-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.mvv-subtitle {
+  font-size: 1.15rem;
+  color: #4b4b4b;
+  line-height: 1.8;
+}
+
+.mvv-card-premium {
+  background: #ffffff;
+  padding: 50px 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+  transition: 0.4s ease;
+  height: 100%;
+}
+
+.mvv-card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.10);
+}
+
+.mvv-icon-circle {
+  width: 70px;
+  height: 70px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(46,125,50,0.4);
+}
+
+.mvv-card-premium h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.mvv-card-premium p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.mvv-card-premium ul {
+  padding-left: 20px;
+}
+
+.mvv-card-premium ul li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .mvv-title {
+    font-size: 2rem;
+  }
+}
